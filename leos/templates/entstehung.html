@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/base_style.css">
+    <title>{{site_title}}</title>
+</head>
+<body>
+    {% include "widgets/navbar.html" %}
+    <br>
+    <center>
+        <div class="content">
+            {% include "widgets/content.html" %}
+        </div>
+    </center>
+    <br>
+    <br>
+
+    <div class="footer">
+        {% include "widgets/footer.html" %}
+    </div>
+</body>
+</html>

@@ -1,2 +1,4 @@
-env-leopards
+h2-env
 leos/.env
+__pycache__
+notizen.txt
