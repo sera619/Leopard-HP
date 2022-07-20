@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% include "widgets/header.html" %}
-    <link rel="stylesheet" href="../static/css/base_style.css">
+    <link rel="stylesheet" href="../static/css/home_style.css">
     
     <title>{{site_title}}</title>
 </head>
@@ -11,36 +11,42 @@
     {% include "widgets/navbar.html" %}
     <br>
     <center>
-    <!-- The parent component -->
-    <div class="curtain">
-        
-      <!-- The component wrapper -->
-      <div class="curtain__wrapper">
-        
-        <!-- The left curtain panel -->
-        <div class="curtain__panel curtain__panel--left">
-    
-        </div> <!-- curtain__panel -->
-        
-        <!-- The prize behind the curtain panels -->
-        <div class="curtain__prize">
-    
-        </div> <!-- curtain__prize -->
-        
-        <!-- The right curtain panel -->
-        <div class="curtain__panel curtain__panel--right">
-            
-        </div> <!-- curtain__panel -->
-        
-      </div> <!-- curtain__wrapper -->
-    
-    </div> <!-- curtain -->
-</center>
+      <br>
+      <h1 id="hero-header">WILLKOMMEN</h1>
+      <br>
+      <div class="outer">
+        <div class="tcell">
+          <div class="curtain-wrapper">
+            <div class="curtain-ratio-keeper">
+              <div class="curtain">
+      
+                <div class="video-wrapper">
+                  <div class="video-ratio-keeper">
+                    <div class="video video-frame">
+                      <div class="home-image"></div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="panel-left"></div>
+                <div class="panel-right"></div>
+              </div>
+      
+              <div class="jacket" title="Play">
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </center>
+    <br>
 {% include "widgets/brand.html" %}
-{% include "widgets/script.html" %}
 <div class="footer">
-    
-    {% include "widgets/footer.html" %}
+  
+  {% include "widgets/footer.html" %}
 </div>
+{% include "widgets/script.html" %}
+<script src="../static/js/curtain.js"></script>
 </body>
 </html>
