@@ -6,21 +6,23 @@ $ymin = 3
 $xmin = 3
 Clear-Host
 Write-Host ""
-Write-Host " Use the up/down arrow to navigate and press enter to make selection."
+Write-Host -ForegroundColor Blue "-: Python Flask-Development Helper :-" 
+Write-Host ""
+
 [Console]::SetCursorPosition(0, $ymin)
 foreach ($name in $list) {
     for ($i = 0; $i -lt $xmin; $i++){
-        Write-Host " " -NoNewline
+        Write-Host "" -NoNewline
 
     }
-    Write-Host "    " + $name
+    Write-Host "" + $name
 }
 
 #Highlight selected item
 function Write-Highlighted{
     [Console]::SetCursorPosition(1 + $xmin, $cursorY + $ymin)
     Write-Host ">" -BackgroundColor Yellow -ForegroundColor Black -NoNewline
-    Write-Host " " + $List[$cursorY] -BackgroundColor Yellow -ForegroundColor Black
+    Write-Host "" + $List[$cursorY] -BackgroundColor Yellow -ForegroundColor Black
     [Console]::SetCursorPosition(0, $cursorY + $ymin)
 }   
 
@@ -28,7 +30,7 @@ function Write-Highlighted{
 #remove higlighted text
 function Write-Normal{
     [Console]::SetCursorPosition(1 + $xmin, $cursorY + $ymin)
-    Write-Host " " + $List[$cursorY]
+    Write-Host "" + $List[$cursorY]
 }
 
 
@@ -67,14 +69,14 @@ while ($menu_active){
     Start-Sleep -Milliseconds 5 
 }
 Clear-Host
-Write-Host $selection
 if($selection -eq "1) Flask Development"){
+    Write-Host "Development mode used."
+    c:/1Coding/Python/hackzor.de/h2/h2-env/Scripts/Activate.ps1
     $env:FLASK_ENV="development"
     flask run
-    Write-Host "Development mode used."
 }elseif ($selection -eq "2) Flask Production") {
+    Write-Host "Production mode used."
+    c:/1Coding/Python/hackzor.de/h2/h2-env/Scripts/Activate.ps1
     $env:FLASK_ENV="production"
     flask run
-    Write-Host "Production mode used."
-
 }
