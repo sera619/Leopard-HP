@@ -22,8 +22,16 @@ def index():
     return render_template("index.html", site_title="Seniorenresidenz für Showtiere | Home")
 
 
-@main.route('/entstehung-&-unterstuetzer', methods=["GET","POST"])
+@main.route('/entstehung', methods=["GET","POST"])
 def entstehung():
     logging.info("Besucher auf Entstehung & Unterstützer")
     return render_template('entstehung.html', site_title="Seniorenresidenz für Showtiere | Entstehung&Untersützer")
 
+@main.route("/spenden", methods=["GET", "POST"])
+def spend():
+    logging.info("Besucher auf Spenden-Seite")
+    return render_template("spends.html", site_title="Seniorenresidenz für Showtiere | Spenen & Patenschaft")
+
+@main.route("/tiere", methods=["POST", "GET"])
+def unsere_tiere():
+    pass
