@@ -71,12 +71,12 @@ while ($menu_active){
 Clear-Host
 if($selection -eq "1) Flask Development"){
     Write-Host "Development mode used."
-    c:/1Coding/Python/hackzor.de/h2/h2-env/Scripts/Activate.ps1
+    c:/1Coding/Python/Leopard-HP/h2-env/Scripts/Activate.ps1
     $env:FLASK_ENV="development"
     flask run
 }elseif ($selection -eq "2) Flask Production") {
     Write-Host "Production mode used."
-    c:/1Coding/Python/hackzor.de/h2/h2-env/Scripts/Activate.ps1
+    c:/1Coding/Python/Leopard-HP/h2-env/Scripts/Activate.ps1
     $env:FLASK_ENV="production"
     flask run
 }
