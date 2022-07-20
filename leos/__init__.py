@@ -13,6 +13,9 @@ def create_app():
     from leos.main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    from leos.payment import payment as payment_blueprint
+    app.register_blueprint(payment_blueprint)
+
     return app
 
 load_dotenv()
