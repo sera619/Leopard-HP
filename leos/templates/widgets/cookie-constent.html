@@ -1,0 +1,93 @@
+<style>
+    #cookiePopup {
+       background: rgb(182, 181, 181);
+       width: 25%;
+       position: fixed;
+       right: 20px;
+       bottom: 25px;
+       box-shadow: 0px 0px 15px #cccccc;
+       padding: 10px 15px;
+       border-radius: 35px;
+       border: 1.5px #097fb7 solid;
+     }
+       #cookiePopup p{
+       text-align: center;
+       font-size: 15px;
+       color: #4e4e4e;
+     }
+     #cookiePopup button{
+       width: 100%;
+       border: navajowhite;
+       background: #097fb7;
+       padding: 5px;
+       border-radius: 10px;
+       color: white;
+     }
+     #cookiePopup h4{
+        text-align: center;
+        font-weight: 600;
+     }
+   </style>
+<div id="cookiePopup">
+    <h4>Cookie Consent</h4>
+    <p>Our website uses cookies to provide your browsing experience and relavent informations.Before continuing to use our website, you agree & accept of our  <a href="#">Cookie Policy & Privacy</a></p>
+    <button id="acceptCookie">Accept</button> 
+    <script type="text/javascript">
+        // set cookie 
+        var cookieName = "nebra-cookie";
+        var cookieValue = "Cookie Nebra-Gnadenhof";
+        var cookieExpireDays = 30;
+        
+        // click accept button
+        let acceptCookie = document.getElementById("acceptCookie");
+        acceptCookie.onclick = function(){
+            createCookie(cookieName, cookieValue, cookieExpireDays);
+        }
+        
+        // set cookie in webbrowser
+        let createCookie = function(cookieName, cookieValue, cookieExpireDays){
+            let currentDate = new Date();
+            currentDate.setTime(currentDate.getTime() +(cookieExpireDays*324*60*60*1000));
+            let expires = "expires=" + currentDate.toLocaleTimeString();
+            
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires +";path=/";
+            if(document.cookie){
+                document.getElementById("cookiePopup").style.display = "none";
+            }else{
+                alert("Unable to set cookue. Please allow all cookie site from cookie setting of your browser!");
+            }
+        }
+        
+        // get cookie from webbrowser
+        let getCookie = function(cookieName){
+            let name = cookieName + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(";");
+            
+        for (let i = 0; i < ca.length; i++){
+            let c = ca[i];
+            while (c.charAt(0) == ' '){
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0){
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    
+    //  check if cookie is set
+    let checkCookie = function(){
+        let check = getCookie(cookieName);
+        
+        if(check == ""){
+            document.getElementById("cookiePopup").style.display = "block";
+        }else{
+            document.getElementById("cookiePopup").style.display = "none";
+        }
+    }
+    checkCookie();
+    
+    
+</script>
+</div>

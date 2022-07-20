@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
+
+.videoplayer h4{
+    color: beige;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.videoplayer{
+    align-items: center;
+    max-width: 75%;
+    padding-bottom: 2%;
+}
+#hero-header{
+    font-size: 64px;
+    margin: 4% auto;
+    color:bisque;
+    font-family: 'Kaushan Script', cursive;
+    
+}
+.card-title{
+    font-size: 36px;
+    margin: 2% auto;
+    color:bisque;
+    font-family: 'Kaushan Script', cursive;
+    
+}

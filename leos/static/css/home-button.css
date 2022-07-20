@@ -1,0 +1,27 @@
+.buttons{
+    margin-top: -8%;
+    margin-bottom: 4%;
+}
+
+.home-button{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid cyan;
+    border-radius: 35px;
+    transition: 0.5s;
+}
+.home-button:hover{
+    color:black;
+    background-color: aqua;
+    text-decoration: none;
+}
+.home-button:active{
+    color: black;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid #fff;
+    transform: translateY(2px);
+    transition: 0.2s;
+
+}

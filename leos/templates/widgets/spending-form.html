@@ -1,6 +1,8 @@
 <center>
 
-    <form class="spend-form">
+    <form id="spend-form" class="spend-form">
+        <h3 id="form-header">Spendenformular</h3>
+        <br>
         <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
@@ -14,15 +16,17 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <label for="textArea" class="col-sm-2 col-form-label">Nachricht (optional)</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div>
+
+                <textarea class="form-control" id="textArea" rows="2"></textarea>
+            </div>
+          </div>
     </div>
     <fieldset class="form-group">
         <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Betrag</legend>
-            <div class="col-sm-10">
+            <div class="col-sm-8">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                     <label class="form-check-label" for="gridRadios1">
@@ -75,22 +79,29 @@
         </div>
     </div>
 </fieldset>
-<div class="form-group row">
-    <div class="col-sm-2">Checkbox</div>
-    <div class="col-sm-10">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
-            <label class="form-check-label" for="gridCheck1">
-                Example checkbox
-            </label>
+<fieldset class="form-group">
+    <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Zahlungmöglichkeiten</legend>
+        <div class="col-sm-8">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paypalRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="paypalRadios">
+                    Paypal
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8" value="option8" >
+                <label class="form-check-label" for="gridRadios8">
+                    Überweisung
+                </label>
+            </div>
         </div>
     </div>
+</fieldset>
+<br>
+<div class="col-sm-10">
+    <input class="spend-button" type="button" value="Abschicken">
 </div>
-    <div class="form-group row">
-        <div class="col-sm-12">
-            <button type="submit" class="btn btn-primary">Spenden</button>
-        </div>
-    </div>
 </form>
 </center>
 

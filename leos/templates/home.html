@@ -3,50 +3,53 @@
 <head>
     {% include "widgets/header.html" %}
     <link rel="stylesheet" href="../static/css/home_style.css">
-    
+    <link rel="stylesheet" href="../static/css/social-button.css">
+    <link rel="stylesheet" href="../static/css/navbar-style.css">
+
+    <link rel="stylesheet" href="../static/css/home-button.css">
     <title>{{site_title}}</title>
 </head>
 <body>
     
     {% include "widgets/navbar.html" %}
     <br>
-    <center>
-      <br>
       <h1 id="hero-header">WILLKOMMEN</h1>
-      <br>
-      <div class="outer">
-        <div class="tcell">
-          <div class="curtain-wrapper">
-            <div class="curtain-ratio-keeper">
-              <div class="curtain">
-      
-                <div class="video-wrapper">
-                  <div class="video-ratio-keeper">
-                    <div class="video video-frame">
-                      <div class="home-image"></div>
-                    </div>
-                  </div>
+    <br>
+    <div class="outer">
+      <div class="tcell">
+        <div class="curtain-wrapper">
+          <div class="curtain-ratio-keeper">
+            <div class="curtain">
+    
+              <div class="video-wrapper">
+                <div class="video-ratio-keeper">
+                  <div class="video video-frame"></div>
                 </div>
-      
-                <div class="panel-left"></div>
-                <div class="panel-right"></div>
               </div>
-      
-              <div class="jacket" title="Play">
-      
-              </div>
+    
+              <div class="panel-left"></div>
+              <div class="panel-right"></div>
+            </div>
+    
+            <div class="jacket" title="Play">
+              <center><br>
+                <img src="../static/images/website-logo.png" alt="" style="z-index:0;height:75%;width:70%; background-size:contain;">
+              </center>
             </div>
           </div>
         </div>
-      </div>      
+      </div>
+    </div>
+    <center>
+      <div class="buttons">
+        <a class="home-button" href="/home">Erfahre mehr</a>
+      </div>
     </center>
-    <br>
-{% include "widgets/brand.html" %}
-<div class="footer">
-  
-  {% include "widgets/footer.html" %}
-</div>
+
+{% include "widgets/brand.html" %}  
+{% include "widgets/footer.html" %}
 {% include "widgets/script.html" %}
+{% include "widgets/cookie-constent.html" %}
 
 </body>
 </html>

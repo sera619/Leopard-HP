@@ -3,16 +3,51 @@
 <head>
     {% include "widgets/header.html" %}
     <link rel="stylesheet" href="../static/css/base_style.css">
+    <link rel="stylesheet" href="../static/css/spend-style.css">
+    <link rel="stylesheet" href="../static/css/navbar-style.css">
+    <link rel="stylesheet" href="../static/css/social-button.css">
+    <link rel="stylesheet" href="../static/css/video.css">
+
+    <title>{{site_title}}</title>
 </head>
 <body>
     {% include "widgets/navbar.html" %}
+    <center>
     <br>
-    {% include "widgets/spending-form.html" %}
+    <h1 id="hero-header">Spenden & Patenschaft</h1>
+    <br>
+        <div class="card border-info mb-3" style="width: 75%;">
+            <div class="card-body">
+                <p class="card-text">
+                    Zur Zeit sind keine Tiere in der Vermittlung, aber so manches Notfellchen/Notfederchen würde gerne einen Paten/In bekommen.
+                    Es werden nur Tiere aufgenommen, die NICHT bereits im Tierschutz sind..
+                    <br><br/>
+                    Wir nehmen nur  Tiere auf, wenn diese nicht üblicherweise in Tierheimen aufgenommen werden können.
+                    Also, sollten Sie gar keinen anderen Platz finden, dann telefonieren Sie mit uns!
+                    Mehr als 20 Jahre Leben und Arbeiten mit den unterschiedlichsten Tierarten belegen die Fach- und Sachkunde.
+                    u.a. für Raubtiere, Reptilien, Papageien, Robben, diverse Haustiere ect.
+                    <br>
+                    <br/>
+                    ACHTUNG! Wir sind ausschließlich ein privates Projekt und bekommen keinerlei staatliche Förderungen. Diese sind nur Vereinen und Verbänden vorbehalten!
+                    Wir finanzieren uns ausschließlich aus eigenen Mitteln.
+                    Sie dürfen Patenschaften übernehmen und /oder uns besuchen kommen, erst Recht, wenn Ihr Liebling bei uns einziehen durfte.
+                </p>
+            </div>
+        </div>
+        <br>
+        {% include "widgets/videoplayer.html" %}
+        <br>
+
+
+        {% include "widgets/spending-form.html" %}
+    </center>
     <br>
     {% include "widgets/brand.html" %}
     <div class="footer">
         {% include "widgets/footer.html" %}
     </div>
     {% include "widgets/script.html" %}
+    {% include "widgets/cookie-constent.html" %}
+
 </body>
 </html>
