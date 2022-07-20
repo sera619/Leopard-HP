@@ -2,18 +2,22 @@
 
 body{
     background-color: #111;
+    margin: 0;
+    padding: 0;
 }
 #spend-form{
     border: 2px solid cyan;
     border-radius: 30px;
 }
+#infotext-mdr{
+    font-family: 'Orbitron', sans-serif;
+}
 .card{
     color: #fff;
     background-color: rgba(0,0,0,0.65);
-    font-weight: bold;
 }
 .card-text{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 #form-header{
     text-transform: uppercase;
@@ -22,7 +26,7 @@ body{
 }
 #hero-header{
     font-size: 64px;
-    margin: 2% auto;
+    margin:  auto 2%;
     color:bisque;
     font-family: 'Kaushan Script', cursive;
     
