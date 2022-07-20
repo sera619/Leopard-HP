@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
+
+body {
+  height: 100%;
+  background: #000000;
+  padding: 0;
+  margin: 0;
+}
+.footer{
+    font-size: 11px;
+    color: #111;
+}
+#hero-header{
+    color:bisque;
+    font-size: 64px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.outer {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tcell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 8px 8px;
+}
+
+.curtain-wrapper {
+  min-width: 40%;
+  max-width: 640px;
+  margin: auto;
+}
+
+.curtain-ratio-keeper {
+  position: relative;
+  padding-top: 56.25%;
+  /* overflow: hidden; */
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(110, 1, 1);
+  box-sizing: border-box;
+  border-radius: 25px;
+  overflow: hidden;
+  background: transparent;
+  animation-delay: 3000ms;
+  z-index: 1;
+
+}
+
+.panel-left,
+.panel-right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0%;
+  transition: all 8s ease;
+
+  /*transition-delay: 300ms;* fade is in place/
+  /*background-image: url("https://picsum.photos/600");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;*/
+  overflow: hidden;
+}
+
+.panel-left {
+  left: 0;
+  animation-delay: 3000ms;
+  /*background-color: rgb(91, 96, 106);*/
+}
+
+.panel-right {
+  right: 0;
+  /*background-color: rgb(229, 211, 211);*/
+}
+
+.panel-left::before,
+.panel-right::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'> <filter id='filter'> <feTurbulence baseFrequency='0.01 0.0001' numOctaves='5'/> <feColorMatrix values='1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1'/></filter> <rect width='100%' height='100%' filter='url(%23filter)'/> </svg>");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  pointer-events: none;
+  animation-delay: 3250ms;
+}
+
+.panel-right::before {
+  left: -100%;
+}
+
+.curtain .panel-left {
+  /* transform: translateX(-100%);*/
+  /*transform: translateX(calc(-100% - 1px));*/
+  animation: slideLeft 8s forwards;
+  animation-delay: 300ms;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(calc(-100% - 1px))
+  }
+}
+
+/*.panel-left::before {
+  background: rgba(0, 0, 0, 0.5);
+}*/
+
+.curtain .panel-right {
+  /*transform: translateX(100%);*/
+  /*transform: translateX(calc(100% + 1px));*/
+  animation: slideRight 8s forwards;
+  animation-delay: 300ms;
+
+}
+
+
+.jacket{
+    background-image: url('../images/website-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: scale-down;
+    visibility: visible;
+    height:90%;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(calc(100% + 1px))
+  }
+}
+
+
+.jacket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*width: 100%;
+  height: 100%;*/
+  margin: auto;
+  cursor: pointer;
+  /* background: red;*/
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.buttondiv {
+    font-family: "Merriweather", serif;
+    font-size: 1rem;
+    margin-right: 2em;
+    margin-top: 8rem;
+    position: relative;
+  }
+.sociallink {
+    text-align: center;
+    
+    margin-bottom: 1rem;
+    color: #111!important;
+  }
+  
+  .socialul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem;
+    list-style-type: none;
+    font-size: 2rem;
+  }
+  
+  .socialul .socialli {
+    padding: 0.5rem;
+  }
+  
+  .fab,
+  .far {
+    font-size: 2.5rem;
+  }
+  
+  /* transition for social icon hover animation */
+  .fa-facebook,
+  .fa-codepen,
+  .fa-youtube,
+  .fa-envelope,
+  .fa-instagram,
+  .fa-github,
+  .fa-pinterest {
+    transition: 0.6s;
+    cursor: pointer;
+  }
+  
+  /* social media icons hover color */
+  .fa-facebook:hover,
+  .fa-facebook:focus {
+    color: #3b5998;
+    transform: scale(1.3);
+  }
+  
+  .fa-twitter:hover,
+  .fa-twitter:focus {
+    color: #1da1f2;
+    transform: scale(1.3);
+  }
+  
+  .fa-youtube:hover,
+  .fa-youtube:focus {
+    color: #FF0000;
+    transform: scale(1.3);
+  }
+  
+  .fa-instagram:hover,
+  .fa-instagram:focus {
+    color: #bd22a2;
+    transform: scale(1.3);
+  }
+  
+  
+  
+  .fa-github:hover,
+  .fa-github:focus {
+    color: rgb(95, 93, 93);
+    transform: scale(1.3);
+  }
+  
+  .fa-envelope:hover,
+  .fa-envelope:focus {
+      color: #e6402a;
+      transform: scale(1.3);
+  }
+  
+  .fa-codepen:hover,
+  .fa-codepen:focus {
+    color: rgb(70, 67, 67);
+    transform: scale(1.3);
+  }
+  
+  .fa-pinterest:hover,
+  .fa-pinterest:focus {
+    color: #b3001b;
+  }
