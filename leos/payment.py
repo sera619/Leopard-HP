@@ -1,4 +1,3 @@
-from crypt import methods
 import os
 import logging
 from dotenv import load_dotenv
