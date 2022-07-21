@@ -1,77 +1,82 @@
-<center>
-    <div class="col">
 
-        <form id="spend-form" class="spend-form bg-dark bg-gradient">
+    <div class="col-sm-6">
+        
+        <form action="spend-confirm" method="POST" id="spend-form" class="card bg-secondary bg-gradient">
+            <br>
             <h3 id="form-header">Spendenformular</h3>
             <br>
+            <p class="card-text">
+                Alle Spenden werden zu 100% in die Haltung und Pflege der Tiere investiert! 
+            </p>
             <div class="form-group row">
-                <label for="inputName" class="col-sm-2 col-form-label"><strong>Name</strong></label>
+                <label required for="inputName" class="col-sm-0 col-form-label"><strong>Name</strong></label>
                 <div class="col-sm-12">
-                    <input type="email" class="form-control" id="inputName" placeholder="Name">
+                    <input type="plaintext" class="form-control" name="inputName"id="inputName" placeholder="Name">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label"><strong>Email</strong></label>
+                <label required for="inputEmail" class="col-sm-0 col-form-label"><strong>Email</strong></label>
                 <div class="col-sm-12">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="textArea" class="col-sm-2 col-form-label"><strong>Nachricht (optional)</strong></label>
+                <label for="textArea" class="col-sm-0 col-form-label"><strong>Nachricht (optional)</strong></label>
                 <div class="col-sm-12">
                     
-                    <textarea class="form-control" id="textArea" rows="2"></textarea>
+                    <textarea name="inputMessage"class="form-control" id="textArea" rows="2"></textarea>
                 </div>
             </div>
 
         <fieldset class="form-group">
             <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0"><strong>Betrag</strong></legend>
+                <legend class="col-form-label col-sm-0 pt-0"><strong>Betrag</strong></legend>
+                <br>
                 <div class="col-sm-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="pay-value" id="gridRadios1" value="2" checked>
                         <label class="form-check-label" for="gridRadios1">
                         2,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios2" value="5">
                     <label class="form-check-label" for="gridRadios2">
                         5,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios3" value="10" >
                     <label class="form-check-label" for="gridRadios3">
                         10,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios4" value="15" >
                     <label class="form-check-label" for="gridRadios4">
                         15,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios5" value="20" >
                     <label class="form-check-label" for="gridRadios5">
                         20,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option6" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios6" value="25" >
                     <label class="form-check-label" for="gridRadios6">
                         25,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios7" value="option7" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios7" value="50" >
                     <label class="form-check-label" for="gridRadios7">
                         50,00 €
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8" value="option8" >
+                    <input class="form-check-input" type="radio" name="pay-value" id="gridRadios8" value="100" >
                     <label class="form-check-label" for="gridRadios8">
                         100,00 €
                     </label>
@@ -82,7 +87,11 @@
     </fieldset>
     <fieldset class="form-group">
         <div class="row">
-            <legend class="col-form-label col-sm-1 pt-0"><strong>Zahlungmöglichkeiten</strong></legend>
+            <br>
+            <legend class="col-form-label col-sm-0 pt-0"><strong>Zahlart</strong></legend>
+            <br>
+            <div class="col-sm-12">
+                
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="paypalRadios" id="gridRadios1" value="option1" checked>
                     <label class="form-check-label" for="paypalRadios">
@@ -91,19 +100,22 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios8" value="option8" >
-                <label class="form-check-label" for="gridRadios8">Überweisung
-          
-                </label>
-            </div>
+                    <label class="form-check-label" for="gridRadios8">Überweisung
+                        
+                    </label>
+                </div>
+            </div>    
+        </div>
+        <br>
+        <input class="spend-button" type="submit" value="Abschicken">
+        <br>
+        </fieldset>
+   
     </div>
-</fieldset>
-<br>
-<div class="col-sm-12">
-    <input class="spend-button" type="button" value="Abschicken">
-</div>
 </form>
-</div>
-</center>
+</div>  
+
+
 
 
 

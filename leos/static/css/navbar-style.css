@@ -2,8 +2,8 @@
 
 .navbar-nav{
     
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: space-around;
+    margin: 1% auto;
 }
 .nav-item{
     text-align: center;

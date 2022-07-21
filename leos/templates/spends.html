@@ -18,6 +18,17 @@
 
             <br>
             <br>
+            {% for message in get_flashed_messages() %}
+            <div class="card border-success mb-3" style="width:80%;">
+                <h2 class="card-header">Spende erfolgreich!</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        {{message}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+            <br>
             <div class="card border-info mb-3" style="width: 90%;">
                 <h1 id="hero-header">Spenden & Patenschaft</h1>
                 <div class="card-body">

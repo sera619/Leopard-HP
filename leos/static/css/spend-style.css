@@ -10,6 +10,7 @@ body{
     border-radius: 30px;
     width: 80%;
     color: #fff;
+    justify-content: center;
 }
 .col-form-label{
     text-decoration: underline;
@@ -38,4 +39,12 @@ body{
 }
 .spacer-8{
     height: 8rem;
+}
+.spend-button{
+    padding:10px 25px;
+    background-color: #45a2ee; 
+}
+.spend-button:hover{
+    background-color: aqua;
+    box-shadow: 0 0 15px aqua, 0 0 15px aqua;
 }
