@@ -6,14 +6,22 @@ body{
     padding: 0;
 }
 #spend-form{
-    border: 2px solid cyan;
+    border: 2px solid #45a2ee;
     border-radius: 30px;
+    width: 80%;
+    color: #fff;
+}
+.col-form-label{
+    text-decoration: underline;
+    font-size: 1.1rem;
 }
 #infotext-mdr{
     font-family: 'Orbitron', sans-serif;
 }
 .card{
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    
     background-color: rgba(0,0,0,0.65);
 }
 .card-text{
@@ -21,13 +29,13 @@ body{
 }
 #form-header{
     text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: underline;
-}
-#hero-header{
-    font-size: 64px;
-    margin:  auto 2%;
     color:bisque;
     font-family: 'Kaushan Script', cursive;
-    
+}
+
+.spacer{
+    height: 12rem;
+}
+.spacer-8{
+    height: 8rem;
 }

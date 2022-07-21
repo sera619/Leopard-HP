@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
 html,
 body {
-  height: 100%;
   background: #111;
   padding: 0;
   margin: 0;
@@ -10,13 +9,14 @@ body {
 .outer {
   display: table;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 0;
+  vertical-align:top;
+
   width: 100%;
 }
 
 .tcell {
   display: table-cell;
-  vertical-align: middle;
   padding: 8px 8px;
 }
 
@@ -151,10 +151,11 @@ footer{
   font-size: 11px;
   color: rgba(0,0,0,0.65)
 }
-#hero-header{
-  color:bisque;
-  font-family: 'Kaushan Script', cursive;
-  margin-bottom: -10%;
+
+#card-header{
+  font-size: 3.5rem;
+    color:bisque;
+    font-family: 'Kaushan Script', cursive;
   text-align: center;
-  font-size: 64px;
+
 }

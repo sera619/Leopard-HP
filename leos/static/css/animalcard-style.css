@@ -2,10 +2,13 @@
 .body-card{
     font-family: 'Orbitron', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
     min-height: 100vh;
     background: #111;
+    position: relative;
+
+
 }
 .card-container{
     box-sizing: border-box;
@@ -14,14 +17,14 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px 0;
+    width: fit-content;
+    height:fit-content;
 }
 
 
 .card-container .box{
     position: relative; 
-    width: 650px;
-    height: 600px;
+    height: fit-content;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +32,7 @@
     transition:  0.5s;
 }
 .card-container .box:hover{
-    height: 1200px;
+    height: fit-content;
 }
 
 .card-container .box::before{
@@ -91,7 +94,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 50;
+    z-index: 10;
     pointer-events: none;
 
 }
@@ -114,7 +117,7 @@
 
 
 .card-container .box:hover span::before{
-    top:-10px;
+    top:-60px;
     left:50px;
     width:100px;
     height:100px;
@@ -142,7 +145,7 @@
 
 
 .card-container .box:hover span::after{
-    bottom:-20px;
+    bottom:-60px;
     right:90px;
     width:100px;
     height:100px;
@@ -191,6 +194,9 @@
     font-size: 2em;
     color: rgb(31, 32, 46);
     margin-bottom: 10px;
+}
+.card-container .box .card-content h6{
+    color: rgb(145, 141, 141);
 }
 .card-container .box .card-content p{
     font-size:.9em;
