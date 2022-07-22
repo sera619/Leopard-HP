@@ -68,3 +68,18 @@ animal_list = {
     }
 
 }
+
+team_list = {
+    "Birgit Stache":{
+        "text":"Ihre Leidenschaft für Tiere begann in der frühesten Kindheit. Raubtiere faszinierten Sie ganz besonders. Nach dem Sie zwei Berufe erlernte, Sie in ihrer Freizeit immer mit Kind und Kegel bei Tieren zu finden war, hängte sie ihr Angestelltendasein im Öffentlichen Dienst an den Nagel. Ihre Tiertrainerkarriere begann 1998 in einer der wenigen Raubkatzenillusionshows von Europa. 14 Jahre lang tourte sie von Spanien bis nach Bulgarien. Ihr Weg begann jedoch in Deutschland im altehrwürdigen Hansa Theater in Hamburg.  Führte über verschiedene Variete Theater und Zirkussengagement über einer Vielzahl von Freizeitparks bis hin zum 25. Goldencircusfestival nach Rom (Bronzenes Colosseum). Selbst bei 'Stars in der Manege', 'Superpet' und 'Supertalent'  begeisterte  Sie mit ihrem Einfühlungsvermögen für die Tiere das Publikum. ",
+        "img_link":"/static/images/team/birgit-team.jpg"
+    },
+    "Dominik Kuzina":{
+        "text":"Bereits mit 9 Jahren saß ich bei der Tiertrainerin Birgit Stache im Wohnwagen und wollte unbedingt das zaubern mit Tieren erlernen. Durch die Kontakte meiner Eltern durfte ich bei vielen renommierten Tiertrainern/Innen Praxis aneignen. Ich erweitere regelmäßig meine Fertigkeiten und Fähigkeiten im  Umgang mit Tieren, lernte mit Robben und Pferden zu arbeiten und unterstütze jetzt ehrenamtlich die 'Seniorenresidenz für Showtiere!'",
+        "img_link": "/static/images/team/dominik-team.jpg"
+    },
+    "S3R43o3":{
+        "text":"Ich bin zertifizierter Cyber-Security Spezialist, Programierer, Hacker, Game-Designer/-Entwickler und Web/Linux/Windows-Administrator. Ich bin ein Nerd der frühen 90er und ein absoluter Tiernarr. Ich betreue ehrenamtlich den gesamten technischen Bereich wie zum Beispiel disese Webseite.",
+        "img_link": "/static/images/team/sera-team.png"
+    }
+}

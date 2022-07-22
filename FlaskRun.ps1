@@ -58,6 +58,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
         Write-Host " "
         C:\1Coding\Python\Leopard-HP\env-leos\Scripts\activate.ps1
         $env:FLASK_ENV="development"
+        Start-Process "http://127.0.0.1:5000/" 
         flask run
     }
     elseif ($x -eq "Production mode") {
@@ -68,7 +69,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
         Write-Host " "
         C:\1Coding\Python\Leopard-HP\env-leos\Scripts\activate.ps1
         $env:FLASK_ENV="production"
-        flask run
+        flask run & Start-Process "http://127.0.0.1:5000/" 
         
     }
     elseif ($x -eq "Exit") {

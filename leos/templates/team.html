@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/navbar-style.css" />
+    <link rel="stylesheet" href="../static/css/social-button.css" />
+    <link rel="stylesheet" href="../static/css/base_style.css" />
+    <link rel="stylesheet" href="../static/css/animals.css" />
+
+    <title>{{site_title}}</title>
+  </head>
+  <body>
+    {% include "widgets/navbar.html" %}
+    <br />
+    <br />
+    <div class="container" >
+      <center>
+        <h1 id="hero-header">Was zeichnet uns aus?</h1>
+        <h4 class="mb-3">Jeder fängt mal klein an - so wie wir. Aus einer gemeinsamen Vision haben wir zusammen Schritt für Schritt etwas Großes gemacht. Darauf sind wir stolz.</h4>
+        <br>
+        
+        
+        {% for member, value in teamdict.items() %}
+        <div class="col">
+            <div class="card animal-bio flex-wrap">
+                <div class="card-block">
+                    <div class="card-header border-0">
+                        
+                        <h4 class="card-title">{{member}}</h4>
+                    </div>
+                    <img
+                    class="card-img-center  img-fluid rounded"
+                    src="{{value['img_link']}}"
+                    style="float:left; width:40em; height:40em;object-fit: contain;"
+                    alt=""
+                    />
+                    
+                    <br>
+                    <div class="w-100 "style="marging:auto; padding:auto;vertical-align: center;" >
+                        <p class="card-text">{{value["text"]}}</p>
+                        <br>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="spacer-8"></div>
+        {% endfor %}
+    </center>
+    </div>
+    {% include "widgets/brand.html" %}
+    {% include "widgets/footer.html" %}
+    {% include "widgets/script.html" %}
+    {% include "widgets/cookie-constent.html" %}
+</body>
+</html>

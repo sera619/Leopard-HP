@@ -1,10 +1,11 @@
 import os
 import logging
+from turtle import title
 from flask import Blueprint, render_template, flash, request, send_file
 from flask.helpers import url_for
 from werkzeug.utils import redirect
 from dotenv import load_dotenv
-from .util import WebTexts, animal_list
+from .util import WebTexts, animal_list, team_list
 
 SITETITLE = "Seniorenresidenz für Showtiere"
 load_dotenv()
@@ -51,6 +52,9 @@ def spend():
 @main.route("/tiere", methods=["POST", "GET"])
 def tiere():
     title = SITETITLE+ " | Tiere"
-    
     return render_template('animals.html', site_title= title, animaldict = animal_list)
-    
+
+@main.route("/team", methods=["POST","GET"])
+def team():
+    title = SITETITLE + " | Team"
+    return render_template('team.html', site_title = title, teamdict = team_list)
