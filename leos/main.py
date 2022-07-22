@@ -4,9 +4,9 @@ from flask import Blueprint, render_template, flash, request, send_file
 from flask.helpers import url_for
 from werkzeug.utils import redirect
 from dotenv import load_dotenv
-from .util import WebTexts
+from .util import WebTexts, animal_list
 
-
+SITETITLE = "Seniorenresidenz für Showtiere"
 load_dotenv()
 main = Blueprint('main', __name__)
 
@@ -14,19 +14,19 @@ main = Blueprint('main', __name__)
 @main.route('/', methods=["POST", "GET"])
 def home():
     logging.info("Besucher auf Homeseite")
-    return render_template('home.html', site_title="Seniorenresidenz für Showtiere")
+    return render_template('home.html', site_title=SITETITLE)
 
 
 @main.route("/home", methods=["POST", "GET"])
 def index():
     logging.info("Besucher auf Startseite")
-    return render_template("index.html", site_title="Seniorenresidenz für Showtiere | Home")
+    return render_template("index.html", site_title= SITETITLE+" | Home")
 
 
 @main.route('/entstehung', methods=["GET","POST"])
 def entstehung():
     logging.info("Besucher auf Entstehung & Unterstützer")
-    return render_template('entstehung.html', site_title="Seniorenresidenz für Showtiere | Entstehung&Untersützer")
+    return render_template('entstehung.html', site_title=SITETITLE+" | Entstehung&Untersützer")
 
 @main.route("/spenden", methods=["GET", "POST"])
 def spend():
@@ -39,7 +39,7 @@ def spend():
     card2_image_url = WebTexts.DOGIMAGEURL
     logging.info("Besucher auf Spenden-Seite")
     return render_template("spends.html",
-     site_title="Seniorenresidenz für Showtiere | Spenen & Patenschaft",
+     site_title=SITETITLE +" | Spenen & Patenschaft",
      card_1_text = card1_text,
      card_1_title = card1_title,
      card_1_imageURL = card1_image_url,
@@ -49,5 +49,8 @@ def spend():
      )
 
 @main.route("/tiere", methods=["POST", "GET"])
-def unsere_tiere():
-    pass
+def tiere():
+    title = SITETITLE+ " | Tiere"
+    
+    return render_template('animals.html', site_title= title, animaldict = animal_list)
+    

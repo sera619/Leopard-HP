@@ -3,23 +3,55 @@
 <head>
     {% include "widgets/header.html" %}
     <link rel="stylesheet" href="../static/css/base_style.css">
+    <link rel="stylesheet" href="../static/css/navbar-style.css">
+    <link rel="stylesheet" href="../static/css/social-button.css">
+    <link rel="stylesheet" href="../static/css/entstehung.css">
+    
     <title>{{site_title}}</title>
 </head>
 <body>
     {% include "widgets/navbar.html" %}
     <br>
+    <div class="container">
     <center>
-        <div class="content">
-            {% include "widgets/content.html" %}
-        </div>
-    </center>
+
+        <h1 id="hero-header">Entstehung</h1>
+        <br>
+        <div class="col">
+
+            <h4 class="mb-3">Nachfolgend lesen Sie die Entstehung der Seniorenresidenz für Showtiere.... eine Dokumentation über die Aufnahme der Leoparden Troja und Paris 2019
+                <br><br>Aber zu aller erst ist hier der Platz zum Danke sagen für unsere Unterstützer!
+                Auch den vielen privaten Menschen möchte ich hier danken, auch wenn Ihre Namen unerwähnt bleiben. Viele gehören zu meinem engsten Kreis aus Familie, Freunden, Verwandten und Bekannten.
+                Aber auch ein Dank an Menschen, die von uns gehört haben, uns deshalb unterstützen und wir sie hoffentlich bald Privat kennen lernen dürfen!</h4>
+                <br>
+            </div>
+            <br>
+    
+        <div class="col">
+            <div class="card animal-bio flex-row flex-wrap">
+              <div class="card-block">
+                <div class="card-header border-0">
+  
+                  <h4 class="card-title">Die Geschichte</h4>
+              </div>
+            
+                <div class="card-body">
+                  <p class="card-text">Im Dezember 2018 erkrankte der Eigentümer der beiden Raubkatzen Troja und Paris an Krebs. Da dieser bereits seit mehrern Jahren die Shows mit Raubtieren aus Altersgründen aufgegeben hatte und er bereits 5 Jahre nach einem Platz für die Tiere suchte, trat er an die Inhaberin der Seniorenresidenz für Showtiere heran und bat um Pflege der Tiere. Birgit Stache lebte und arbeitete 14 Jahre lang in der Panther-Magic-Show und diese beiden Tiere wurden wärend dieser Zeit von ihr trainiert. 2012 endete ihr Engagement und sie musste nicht nur diese beiden Katzeln zurück lassen. Keine Frage, die beiden Jungs sollten in Großwangen ein zu Hause finden.
+                    Von Dezember 2018 bis zur Aufnahme pendelte sie wöchentlich mehrmals von Sachsen Anhalt nach Bayern und stellte gemeinsam mit einem lieben Nachbarn die Pflege der Tiere sicher. Viele behördliche Hürden mussten genommen werden. Und ihr Helferteam arbeitete unermüdlich bis zum Umfallen und das unentgeltlich. Freunde unterstützten sie mit Material. Familie finanzierte u.a. den Kauf von Material vor und die Bank lies uns auch nicht im Stich. Ein Dankeschön gilt aber vor allem den beteiligten Ämtern, die letztendlich die Bewilligungen erteilten und einen Einzug der Leoparden am 19.06.2019 ermöglichten.
+                    Und nun folgt die Dokumentation, die für die Behörden erstellt wurde.</p>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+    </div>
     <br>
     <br>
 
-    <div class="footer">
-        {% include "widgets/footer.html" %}
-    </div>
     {% include "widgets/brand.html" %}
+    {% include "widgets/footer.html" %}
     {% include "widgets/cookie-constent.html" %}
     {% include "widgets/script.html" %}
     

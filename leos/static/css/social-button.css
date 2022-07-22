@@ -9,7 +9,7 @@
     text-align: center;
     
     margin-bottom: 1rem;
-    color: rgb(112, 110, 110)!important;
+    color: rgb(182, 178, 178)!important;
   }
   
   .socialul {
@@ -46,7 +46,7 @@
   /* social media icons hover color */
   .fa-facebook:hover,
   .fa-facebook:focus {
-    color: #3b5998;
+    color: #476ec2;
     transform: scale(1.3);
   }
   

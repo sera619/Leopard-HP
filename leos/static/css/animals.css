@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
+
+
+
+.animal-bio{
+    background-color: rgba(231, 124, 231, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 35px;
+    margin: auto 2%;
+    padding: 0 10px;
+    border: transparent solid;
+    box-shadow: 0 0 15px rgba(231, 124, 231, 0.25),0 0 25px rgba(231, 124, 231, 0.25);
+}
+.card-title{
+    color:bisque;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+}
+.card-header{
+    background-color: transparent;
+}
+.card-text {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+#hero-header{
+    font-size: 3rem;
+}
+.mb-3{
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}

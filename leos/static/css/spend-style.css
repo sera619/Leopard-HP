@@ -1,50 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap");
 
-body{
-    background-color: #111;
-    margin: 0;
-    padding: 0;
+body {
+    background: linear-gradient(137deg, #211f6e, #3d82e1);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-#spend-form{
-    border: 2px solid #45a2ee;
-    border-radius: 30px;
-    width: 80%;
-    color: #fff;
-    justify-content: center;
+#spend-form {
+  border: 2px solid #45a2ee;
+  border-radius: 30px;
+  width: 80%;
+  color: #fff;
+  justify-content: center;
 }
-.col-form-label{
-    text-decoration: underline;
-    font-size: 1.1rem;
+.col-form-label {
+  text-decoration: underline;
+  font-size: 1.1rem;
 }
-#infotext-mdr{
-    font-family: 'Orbitron', sans-serif;
+#infotext-mdr {
+  font-family: "Orbitron", sans-serif;
 }
-.card{
-    color: #fff;
-    font-family: 'Orbitron', sans-serif;
-    
-    background-color: rgba(0,0,0,0.65);
+.card {
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+
+  background-color: rgba(0, 0, 0, 0.65);
 }
-.card-text{
-    font-size: 1.2rem;
+.card-text {
+  font-size: 1.2rem;
 }
-#form-header{
-    text-transform: uppercase;
-    color:bisque;
-    font-family: 'Kaushan Script', cursive;
+#form-header {
+  text-transform: uppercase;
+  color: bisque;
+  font-family: "Kaushan Script", cursive;
 }
 
-.spacer{
-    height: 12rem;
+.spacer {
+  height: 12rem;
 }
-.spacer-8{
-    height: 8rem;
+.spacer-8 {
+  height: 8rem;
 }
-.spend-button{
-    padding:10px 25px;
-    background-color: #45a2ee; 
+.spend-button {
+  padding: 10px 25px;
+  background-color: #45a2ee;
 }
-.spend-button:hover{
-    background-color: aqua;
-    box-shadow: 0 0 15px aqua, 0 0 15px aqua;
+.spend-button:hover {
+  background-color: aqua;
+  box-shadow: 0 0 15px aqua, 0 0 15px aqua;
 }

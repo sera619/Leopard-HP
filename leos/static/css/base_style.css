@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
 
+body {
+    background: linear-gradient(137deg, #211f6e, #3d82e1);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .spend-form{
   align-items: center;
@@ -39,3 +45,6 @@ footer{
 .card-text{
     font-size: 1.3rem;
 }
+.spacer-8 {
+    height: 8rem;
+  }

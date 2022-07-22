@@ -35,3 +35,36 @@ Wie es weiter geht mit Max? - Sie erfahren es bei uns!
 
     
     """
+
+
+animal_list = {
+    "Paris": {
+        "text": "In jungen Jahren begeistert dieser Leopard mit seiner Schönheit das Publikum so sehr, dass er für Fotoshootings gebucht wurde. Diese Printwerbung war Europaweit noch Jahre Später in großen Fachmärkten zu sehen. Für den Werbespot ließ er sich von seinem jüngeren Bruder Troja doubeln.",
+        "img_link": "/static/images/animals/paris.jpg"
+        },
+    "Bandit Dugado":{
+        "text":"ist durch und durch ein ganzer Dorfhund.Bandit ist im Juli 2017 geboren.Der Papa ist 3/4 Bordercollie & 1/4 Strobel Mix, wogegen die Mama ein Gelbbacke Hütehund ist.Seine Spezialität ist die gewaltige Sprungkraft die er u.a. in der gemischten Tiershow 'Rio und Ihre Freunde' sowie als Dopingkontrolle im 'Trainingslager für die Olympischen Robbenspiele' zeigte.Zu Lebzeiten bereits vom Maler Peter Sahl aus Memleben verewigt.",
+        "img_link":"/static/images/animals/bandit.jpg"
+    },
+    "Maja, die Azubine":{
+        "text":"Diese hübsche Mädchen bewohnt seit 2018 die Seniorenresidenz für Showtiere. Als 'Trennungsopfer' und dem damit verbundenen Umzug in eine kleinere Wohnung machten es notwendig ein neues zu Hause für den erst einjähigen Vogel zu finden. Gerade in jungen Jahren benötigen Papageien sehr viel Kontakt, Ansprache und Beschäftigung. Was lag da näher, als Maja in die 'Große Papageienreveu' zu integrieren. Als Azubiene lernte sie nicht nur den schwierigen Kugellauf, sondern beherrscht als 2. Graupapagei der Welt den Tunnelflug, bald perfekt.... ",
+        "img_link":"/static/images/animals/maja.jpg",
+    },
+    "Rio Superpet":{
+        "text":"Das Minischweinchen Rio wurde am 11.11.2014 geboren. Ihr Name ist somit Programm. Als Baby mit 4 Wochen benötigte sie Hilfe und wurde deshalb weiter per Flasche großgezogen. Sie lebte das erste Jahr im Wohnwagen und als sie größer wurde ging sie Tagsüber zu Frauly ins Bett. Das war der Zeitpunkt für die eigene Höhle. Leider verstand sie sich nicht mit mit der Schweinegruppe, deshalb gesellten wir Ihr Hunde dazu.Auch Sie wurde zu Lebzeiten bereits vom Maler Peter Sahl aus Memleben verewigt.",
+        "img_link":"/static/images/animals/rio.jpg"
+    },
+    "Coco Jambo":{
+        "text":"zog im Oktober 2019 im Alter von 5 Jahren in der Seniorenresidenz für Showtiere ein. Dieser lustige Geselle hat es faustdick hinter den Ohren und ist auf Grund seiner jahrelangen Einzelhaltung als Handaufzucht nur schwer zu vergesellschaften. Wir haben es probiert.... Damit er sich nicht langweilt, hatte er bereits im Frühjahr 2020 sein Bühnendebut. Er spielte den Part Clown, Kobold und Herzensbrecher in der großen Papageienreveu. ",
+        "img_link": "/static/images/animals/coco.jpg"
+    },
+    "Magische Tauben":{
+        "text":"die kleinen Turtulet´s, sind seit je her die Tauben der Magier. Seit 2006 sind einige von ihnen bereits Showstars in den verschiedensten Produktionen.  Besondere Auftritte dieser zweibeinigen Schönheiten, die wegen Ihrer Stimme auch Lachtauben genannt werden, waren mehrere Einsätze beim Supertalent, u.a. für den Südkoreanischen Zauberkünstler Jaehoon Lim, einer der besten Magier in der Sparte Illusionen mit Tieren. ",
+        "img_link":"/static/images/animals/tauben.jpg"
+    },
+    "Lucy and Railey":{
+        "text":"sind die ersten Papageien, die als Abgabetiere in der Seniorenresidenz für Showtiere im Jahr 2017 einzogen. Leider sind auch diese beiden Grünzügelpapageien Handaufzuchten, die auf Grund ihres 'schlechten Benehmens' 3 Vorbesitzer hatten.Sie waren in der Show 'Rio und Ihre Freunde' die kleinen Kobolde, die die Besucher so liebten. Jedoch Vorsicht! Diese Tiere sind gerade in der hormonellen Hochphase die 'Bulldoggen' unter den Papageien und nicht für Familien mit Kindern geeignet.",
+        "img_link":"/static/images/animals/lucy-railey.jpg"
+    }
+
+}

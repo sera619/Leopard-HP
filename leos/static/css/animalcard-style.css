@@ -5,7 +5,7 @@
     justify-content:space-evenly;
     align-items: center;
     min-height: 100vh;
-    background: #111;
+    background: transparent;
     position: relative;
 
 
@@ -24,7 +24,7 @@
 
 .card-container .box{
     position: relative; 
-    height: min-content;
+    height:auto;
     display:flex;
     justify-content: center;
     align-items: center;
