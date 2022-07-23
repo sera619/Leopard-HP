@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../static/css/navbar-style.css">
     <link rel="stylesheet" href="../static/css/social-button.css">
     <link rel="stylesheet" href="../static/css/entstehung.css">
+    <link rel="stylesheet" href="../static/css/slideshow.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/themes/splide-default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    
     
     <title>{{site_title}}</title>
 </head>
@@ -26,6 +30,7 @@
                 <br>
             </div>
             <br>
+            <br>
     
         <div class="col">
             <div class="card animal-bio flex-row flex-wrap">
@@ -40,11 +45,146 @@
                     Von Dezember 2018 bis zur Aufnahme pendelte sie wöchentlich mehrmals von Sachsen Anhalt nach Bayern und stellte gemeinsam mit einem lieben Nachbarn die Pflege der Tiere sicher. Viele behördliche Hürden mussten genommen werden. Und ihr Helferteam arbeitete unermüdlich bis zum Umfallen und das unentgeltlich. Freunde unterstützten sie mit Material. Familie finanzierte u.a. den Kauf von Material vor und die Bank lies uns auch nicht im Stich. Ein Dankeschön gilt aber vor allem den beteiligten Ämtern, die letztendlich die Bewilligungen erteilten und einen Einzug der Leoparden am 19.06.2019 ermöglichten.
                     Und nun folgt die Dokumentation, die für die Behörden erstellt wurde.</p>
                   <br />
+                  <div class="card-header border-0">
+                    <h4 class="card-title">Eine Dokumentation</h4>
+                  </div>
+                  <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                          {% for image, value in storyimages.items() %}
+                            <li class="splide__slide" data-splide-interval="4500">
+                                <img src="{{ value['img_link'] }}" alt="" />
+                                <div class="img-text-container">
+                                  <p class="img_text">{{ value['text'] }}</p>
+
+                                </div>
+                            </li>
+                          {% endfor %}
+                          </ul>
+                    </div>
+                </section>
+                
+
+                </div>
+    
                 </div>
               </div>
             </div>
+            <br>
+            <br>
+            <center>
+
+            <div class="col">
+              <div class="card animal-bio flex-row flex-wrap">
+                <div class="card-block">
+                  <div class="card-header border-0">
+                    <h4 class="card-title">In Zahlen</h4>
+                    <br/>
+                </div>
+                  <div class="card-body">
+                    <p class="card-text" style="text-align: left; font-weight:normal;">
+                      <strong>Erster und Zweiter Bauabschnitt</strong> 
+                       <br>Von Dezember 2018 bis 08.07.2019 wurden u.a.
+                        <br>
+                        <br>
+                        <strong>14125,71 €</strong> an Material gekauft
+                        <br>
+                        <strong>6952,50 €</strong> an Dienstleistungen Dritter ausgegeben.
+                        <br>
+                        <br>Und es wurden <strong>1159.8 ARBEITSSTUNDEN</strong> geleistet. 
+                        <br>
+                        <br>Nicht eingerechnet sind die unzähligen Fahrten um die Leoparden zu versorgen…
+                        <br>
+                        Nicht eingerechnet sind die unzähligen Bürostunden zum Organisieren des Materials…
+                        <br>
+                        Nicht eingerechnet sind die zahlreichen Stunden für Behördentermine und Telefonate….
+                    </p>
+                    <br />
+
+                  
+  
+              </div>
+      
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="col" >
+                <div class="card animal-bio flex-row flex-wrap">
+                  <div class="card-block"style="width: 100%;">
+                    <div class="card-header border-0">
+                      <h4 class="card-title">Bauabschnitt 3</h4>
+                      <br/>
+                  </div>
+                    <div class="card-body"style="width: 100%;">
+                      
+                        <ul class="list-group list-group-horizontal"style="width: 100%;">
+                        <li class="list-group-item"style="width: 100%;">11 Deckentraversen a 9 Meter a ca 1000,00 €</li>
+                        <li class="list-group-item"style="width: 100%;">11000,00 €</li>
+                      </ul>
+
+                      
+                      <ul class="list-group list-group-horizontal"style="width: 100%;">
+                        <li class="list-group-item"style="width: 100%;">75 Holzplatten 24mm a 0,90m x 3,00m a 120,00 €</li>
+                        <li class="list-group-item"style="width: 100%;">9000,00 €</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal"style="width: 100%;">
+                        <li class="list-group-item"style="width: 100%;">Gittermaterial ca. 4000,00 €</li>
+                        <li class="list-group-item"style="width: 100%;">4000,00 €</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal"style="width: 100%;">
+                        <li class="list-group-item"style="width: 100%;">Fließenmaterial 88m² Pro m² a 15,00 €</li>
+                        <li class="list-group-item"style="width: 100%;">1320,00 €</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal"style="width: 100%;">
+                        <li class="list-group-item"style="width: 100%;">Fließen Wände 132m² pro m² a 15,00 € </li>
+                        <li class="list-group-item"style="width: 100%;">1980,00 €</li>
+                      </ul>
+                      <ul class="list-group list-group-horizontal "style="width: 100%;">
+                        <li class="list-group-item list-sum"style="width: 100%;">Geschätze Gesamtkosten</li>
+                        <li class="list-group-item list-sum"style="width: 100%;">25.000,00 € - 30.000,00 €</li>
+                      </ul>
+                      <br>
+                      <br>
+                        <p class="card-text">
+
+                        Eine Förderung dieses Projektes wurde von den Behörden abgelehnt.
+                        <br>
+                        Bergündung: Es werden nur Vereine und Verbände gefördert.
+                        <br>
+                        <br>
+                      Eine Gründung einer solchen Einrichtung, nur aus Gründen der Förderfähigkeit, lehne ich aus moralischen Gründen ab.
+                      Selbst Stiftungen, mit dem Ziel des Tierschutzes, mit denen wir Kontakt aufgenommen haben wollten nur dann fördern, wenn Spendenquittungen dafür ausgestellt werden können.
+                      Mein moralischer Anspruch:
+                      <br>
+                      <br>
+                      "WER TIEREN HELFEN MÖCHTE BRAUCHT KEINE VEREINSMEYEREI und IST AUCH NICHT NUR AUF STEUERLICHE ABSCHREIBUNGSMÖGLICHKEITEN AUS."
+                      <br>
+                      <br>
+                      
+                      Sie verstehen sehr guten diesen Ansatzpunkt und möchten unser privates Projekt unterstützen? Sprechen Sie mit uns! Gerne  per Telefon oder E-Mail Kontakt
+                      
+                      
+                    </p>
+                      
+                    </div>
+        
+                    </div>
+                  </div>
+                </div>
+  
+
+
+
+
+
+
+
           </div>
         </center>
+      </center>
 
     </div>
     <br>
@@ -53,7 +193,7 @@
     {% include "widgets/brand.html" %}
     {% include "widgets/footer.html" %}
     {% include "widgets/cookie-constent.html" %}
+    <script src="../static/js/slideshow.js"></script>
     {% include "widgets/script.html" %}
-    
 </body>
 </html>

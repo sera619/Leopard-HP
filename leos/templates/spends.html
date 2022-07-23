@@ -19,7 +19,7 @@
             <br>
             <br>
             {% for message in get_flashed_messages() %}
-            <div class="card border-success bg-secondary bg-gradient mb-3" style="width:80%;">
+            <div class="card mb-3" style="width:80%;">
                 <h2 style="color:green;" class="card-header">Spende erfolgreich!</h2>
                 <div class="card-body">
                     <p class="card-text">
@@ -29,7 +29,7 @@
             </div>
             {% endfor %}
             <br>
-            <div class="card border-info mb-3" style="width: 90%;">
+            <div class="card mb-3" style="width: 90%;">
                 <h1 id="hero-header">Spenden & Patenschaft</h1>
                 <div class="card-body">
                     <p class="card-text">
@@ -49,8 +49,8 @@
                 </div>
         </div>
         <br>
-        <div class="card border-info mb-3" style="width: 90%;">
-            <h1 class="card-title"id="hero-header">Nachrichten Beitrag des MDR</h1>
+        <div class="card mb-3" style="width: 90%;">
+            <h1 class="card-title" id="hero-header">Nachrichten Beitrag des MDR</h1>
             <div class="card-body">
                     <p class="card-text">In diesem kurzen Beitrag des MDR wird deutlich wieviel Einsatz und eben auch finanzielle Mittel es braucht, um die Tiere adäquat zu versorgen und zu betreuen.
                     <br>
@@ -68,7 +68,7 @@
         <div class="col">
             
             <div class="card-container">
-                <div class="body-card">
+                <div class="card">
                     <div class="box">
                         <span></span>
                         <div class="card-content">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="spacer-8"></div>
-                <div class="body-card">
+                <div class="card">
                     <div class="box">
                         <span></span>
                         <div class="card-content">
@@ -130,6 +130,8 @@
             <div class="spacer-8"></div>
             
             {% include "widgets/spending-form.html" %}
+            <br>
+            <br>
         </center>
         <br>
         {% include "widgets/brand.html" %}

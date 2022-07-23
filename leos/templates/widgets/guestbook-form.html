@@ -1,0 +1,30 @@
+
+
+        <form action="/guestbook/new-entry" method="POST">
+            <center>
+
+
+
+            <div class="card guest-book-entry"style="margin:10%; width: 65%;">
+                <div class="card-header border-0">
+                    <h4 class="card-title">Neuer Eintrag</h4>
+                </div>
+                <br>
+                <label style="margin: auto 10%;"for="fname">Vorname</label>
+                <input  style="margin: auto 10%;"required type="text" id="fname" name="firstname" placeholder="Dein Vorname">
+                <br>
+                <label style="margin: auto 10%;" for="lname">Nachname</label>
+                <input  style="margin: auto 10%;"required type="text" id="lname" name="lastname" placeholder="Dein Nachname">
+                <br>
+                <label  style="margin: auto 10%;"for="email">E-Mail</label>
+                <input  style="margin: auto 10%;"required type="email" id="email" name="email" placeholder="E-Mail (example@gmail.com)">
+                <br>
+            <label  style="margin: auto 10%;"for="subject">Nachricht</label>
+            <textarea style="margin: auto 10%; height: 12rem;" id="subject" name="guestbookMessage" placeholder="Schreibe deine Nachricht hier..." ></textarea>
+
+            <input id="more-button"  style="margin: 2% 40%;"type="submit" value="Abschicken">
+            
+        </div>
+    </center>
+    </form>
+  

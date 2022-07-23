@@ -5,7 +5,7 @@ from flask import Blueprint, render_template, flash, request, send_file
 from flask.helpers import url_for
 from werkzeug.utils import redirect
 from dotenv import load_dotenv
-from .util import WebTexts, animal_list, team_list
+from .util import WebTexts, animal_list, team_list, img_story
 
 SITETITLE = "Seniorenresidenz für Showtiere"
 load_dotenv()
@@ -27,7 +27,8 @@ def index():
 @main.route('/entstehung', methods=["GET","POST"])
 def entstehung():
     logging.info("Besucher auf Entstehung & Unterstützer")
-    return render_template('entstehung.html', site_title=SITETITLE+" | Entstehung&Untersützer")
+
+    return render_template('entstehung.html', site_title=SITETITLE+" | Entstehung&Untersützer", storyimages = img_story)
 
 @main.route("/spenden", methods=["GET", "POST"])
 def spend():

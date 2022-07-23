@@ -20,9 +20,26 @@ font-family: 'Kaushan Script', cursive;
 font-size: 2.6rem;
 }
 .card-header{
-background-color: transparent;
+    text-align: center;
+    background-color: transparent;
 }
 .card-text {
 color: #fff;
 font-family: 'Orbitron', sans-serif;
+}
+
+.list-group-item{
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255, .5);
+    font-family: 'Orbitron', sans-serif;
+    font-size:1.1rem;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+}
+.list-sum{
+    font-size: 1.2rem;
+    color:rgb(235, 181, 116);
+    border-bottom: 2.5px solid rgb(235, 181, 116);
+  
 }

@@ -1,0 +1,13 @@
+
+.img-text-container{
+  padding: 10px 15px;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+
+.img_text{
+  text-align: center;
+  background-color: rgba(104, 64, 114, 0.75);
+  color: #fff;
+}

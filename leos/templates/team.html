@@ -35,14 +35,31 @@
                     alt=""
                     />
                     
-                    <br>
+                    
                     <div class="w-100 "style="marging:auto; padding:auto;vertical-align: center;" >
                         <p class="card-text">{{value["text"]}}</p>
                         <br>
                     </div>
                 </div>
                 <br>
+                {% if value["text2"] %}
+                <div class="card-block">
+                  <img
+                  class="card-img-center  img-fluid rounded"
+                  src="{{value['img_link2']}}"
+                  style="float:left; width:40em; height:40em;object-fit: contain;"
+                  alt=""
+                  />
+                  <div class="w-100 "style="marging:auto; padding:auto;vertical-align: center;" >
+                      <p class="card-text">{{value["text2"]}}</p>
+                      <br>
+                  </div>
+                  
+                  <br>
+              </div>
+              {% endif %}
             </div>
+            <br>
         </div>
         <div class="spacer-8"></div>
         {% endfor %}

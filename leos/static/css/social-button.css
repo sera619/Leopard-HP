@@ -1,3 +1,47 @@
+#back-button{
+  position: fixed; /* Fixed/sticky position */
+  bottom: 12rem; /* Place the button at the bottom of the page */
+  right: 45.4%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  display: none;
+
+ text-decoration: none;
+ color: #fff;
+ font-size: 0.85rem;
+ border: 1px solid transparent;
+ font-family: 'Orbitron', sans-serif;
+ background-color: rgba(255, 255, 255, 0.5);
+ border-top-left-radius: 0px;
+ border-bottom-right-radius: 0px;
+ border-top-right-radius:  30px;
+ border-bottom-left-radius: 30px;
+ transition: .5s ease-in-out;
+ text-align: center;
+ padding: 10px 35px;
+}
+#back-button:hover{
+ border-color: cyan;
+ color:rgb(78, 4, 107);
+ box-shadow: inset  0 0 0 25px rgba(0, 255, 255, 0.795), 0 0 10px cyan;
+ border-bottom-left-radius:  0px;
+ border-top-right-radius: 0px;
+ border-top-left-radius:  30px;
+ border-bottom-right-radius: 30px;
+}
+#more-button:focus{
+ border-color: cyan;
+ color:rgb(78, 4, 107);
+ box-shadow: inset  0 0 0 25px rgba(0, 255, 255, 0.795), 0 0 10px cyan;
+ border-bottom-left-radius:  0px;
+ border-top-right-radius: 0px;
+ border-top-left-radius:  30px;
+ border-bottom-right-radius: 30px;
+
+}
+
+
+
+
 .buttondiv {
     font-family: "Merriweather", serif;
     font-size: 1rem;

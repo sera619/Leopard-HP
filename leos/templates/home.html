@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/base_style.css">
+
     <link rel="stylesheet" href="../static/css/home_style.css">
     <link rel="stylesheet" href="../static/css/social-button.css">
     <link rel="stylesheet" href="../static/css/navbar-style.css">
@@ -9,12 +11,12 @@
     <title>{{site_title}}</title>
 </head>
 <body>
-    
+    <div class="slide-out-top"></div>
     {% include "widgets/navbar.html" %}
     <div class="container">
 
       <br>
-      <h1 id="card-header">WILLKOMMEN<br>in der</h1>
+      <h1 id="card-header">WILLKOMMEN<br>IN DER</h1>
       <div class="outer">
         <div class="tcell">
           <div class="curtain-wrapper">
@@ -41,11 +43,23 @@
         </div>
       </div>
       <center>
+        <br>
+        <br>
+        <div id="home-info-box"class="card mb-3" style="max-width: 65%;">
+          <div class="card-body">
+              <p class="card-text"><strong>Showstars im Ruhestand</strong> genießen auch jetzt noch Applaus. Seien Sie dabei und besuchen Sie uns!<br><strong>Alle Zwei- und Vierbeiner</strong> freuen sich auf Ihren Besuch.  Bitte haben Sie Verständnis, dass Besuche bei den "Senioren" terminlich koordiniert werden müssen, denn wir können maximal 2 bis 6 Personen auf einmal durch die Seniorenresidenz führen. Aber dafür sind Sie ganz nah dran. So mancher Kontakt kann unter gesicherten Verhältnissen mit unseren Tieren aufgenommen werden, frei nach dem Motto:<br><strong>ERLEBEN, WAS ANDERE NUR SEHEN!</strong></p>
+          </div>
+      </div>
+      <br>
+      <br>
         <div class="buttons">
-          <a class="nav-link" style="width: 20%;font-size: 1rem;" href="/home">Erfahre mehr</a>
+          <a id="more-button" style="width: 20%;font-size: 1rem;" href="/home">Erfahre mehr</a>
         </div>
+        <br>
+        <br>
       </center>
       
+      {% include "widgets/guestbook-form.html" %}
     </div>
       {% include "widgets/brand.html" %}  
       {% include "widgets/footer.html" %}

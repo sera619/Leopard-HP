@@ -148,8 +148,8 @@ body {
 }
 
 footer{
-  font-size: 11px;
-  color: rgba(0,0,0,0.65)
+  font-size: .7rem;
+  color: #fff;
 }
 
 #card-header{
@@ -158,4 +158,60 @@ footer{
     font-family: 'Kaushan Script', cursive;
   text-align: center;
 
+}
+#more-button{
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius:  30px;
+  border-bottom-left-radius: 30px;
+  transition: .5s ease-in-out;
+  text-align: center;
+  padding: 10px 35px;
+}
+#more-button:hover{
+  border-color: cyan;
+  color:rgb(78, 4, 107);
+  box-shadow: inset  0 0 0 25px rgba(0, 255, 255, 0.795), 0 0 10px cyan;
+  border-bottom-left-radius:  0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius:  30px;
+  border-bottom-right-radius: 30px;
+}
+#more-button:focus{
+  border-color: cyan;
+  color:rgb(78, 4, 107);
+  box-shadow: inset  0 0 0 25px rgba(0, 255, 255, 0.795), 0 0 10px cyan;
+  border-bottom-left-radius:  0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius:  30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+
+#home-info-box{
+    -webkit-animation: infobox-animation 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: infobox-animation 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 7.2s;
+}
+@keyframes infobox-animation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+#home-info-box::after{
+  opacity: 100;
+}
+.card-text{
+  color: #fff;
+  font-family: 'Orbitron',sans-serif;
 }
