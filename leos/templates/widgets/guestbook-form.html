@@ -1,5 +1,14 @@
 
-
+            {% for message in get_flashed_messages() %}
+            <div class="card mb-3" style="width:80%;">
+                <h2 style="color:red;" class="card-header">Error</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        {{message}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
         <form action="/guestbook/new-entry" method="POST">
             <center>
 

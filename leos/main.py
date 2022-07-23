@@ -1,5 +1,7 @@
 import os
 import logging
+import json
+import datetime
 from turtle import title
 from flask import Blueprint, render_template, flash, request, send_file
 from flask.helpers import url_for
@@ -11,6 +13,7 @@ SITETITLE = "Seniorenresidenz für Showtiere"
 load_dotenv()
 main = Blueprint('main', __name__)
 
+guestbook_data = {}
 
 @main.route('/', methods=["POST", "GET"])
 def home():
@@ -59,3 +62,60 @@ def tiere():
 def team():
     title = SITETITLE + " | Team"
     return render_template('team.html', site_title = title, teamdict = team_list)
+
+
+
+# guestbook 
+
+@main.route("/gästebuch", methods=["POST", "GET"])
+def guestbook():
+    title = SITETITLE + " | Gästebuch"
+    return render_template('guestbook.html', site_title= title, guestbook_dict = guestbook_data)
+
+@main.route("/guestbook/new-entry", methods=["POST", "GET"])
+def new_guestbook_entry():
+    firstname =request.form.get('firstname')
+    if (firstname == ""):
+        flash('Bitte gebe einen Vornamen ein!')
+        return redirect('/gästebuch')
+
+    lastname = request.form.get('lastname')
+    if lastname == "":
+        flash('Bitte gebe einen Nachnamen ein!')
+        return redirect('/gästebuch')
+
+    new_message_name = str(firstname) + " " + str(lastname)
+    new_message_email = request.form.get('email')
+    if new_message_email == "":
+        flash('Bitte gebe eine gültige Email Addresse ein!')
+        return redirect('/gästebuch')
+   
+    new_message = request.form.get('guestbookMessage')
+    if new_message == "":
+        flash('Bitte gebe eine Nachricht Addresse ein!')
+        return redirect('/gästebuch')
+   
+    new_message_time = datetime.datetime.now()
+    new_data ={"message_name": new_message_name, 
+    "message_email": str(new_message_email),
+    "message_time": str(new_message_time),
+    "message": str(new_message)
+    }
+    guestbook_data.update(new_data)
+    
+    save_guestbook_data(guestbook_data)
+    load_guestbook_data()
+    return redirect('/gästebuch')
+
+
+
+def save_guestbook_data(data):
+    with open("leos\data\guestbook.log", "w") as f:
+        json_string = json.dumps(data)
+        f.write(json_string)
+
+def load_guestbook_data():
+    with open("leos\data\guestbook.log", "r") as fp:
+        guestbook_data = json.load(fp.read())
+        print(guestbook_data)
+    

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/navbar-style.css" />
+    <link rel="stylesheet" href="../static/css/social-button.css" />
+    <link rel="stylesheet" href="../static/css/base_style.css" />
+    <link rel="stylesheet" href="../static/css/animals.css" />
+
+    <title>{{site_title}}</title>
+  </head>
+  <body>
+    {% include "widgets/navbar.html" %}
+    <br />
+    <br />
+    <div class="container">
+      <center>
+        <h1 id="hero-header">Gästebuch</h1>
+        <h4 class="mb-3">Hier können Besucher der Webseite eine Nachricht hinterlassen.</h4>
+        <br>
+
+        
+        {% for message in guestbook_dict %}
+        <div class="col">
+            <div class="card">
+                <div class="card-block">
+                    <div class="card-header border-0">
+                        <h4 class="card-title">{{ message['messages']['message_name'] }}</h4>
+                    </div>
+                    
+                    
+                    <p class="card-text">
+                        {{ message['message']}}
+                    </p>
+                    <br />
+                </div>
+                <h6>{{ message['message_time'] }}</h6>
+            </div>
+        </div>
+        {% endfor %}
+        
+
+        {% include "widgets/guestbook-form.html" %}
+<!--
+
+
+-->
+</center>
+</div>
+    {% include "widgets/brand.html" %}
+    {% include "widgets/footer.html" %}
+    {% include "widgets/script.html" %}
+    {% include "widgets/cookie-constent.html" %}
+  </body>
+</html>
