@@ -2,18 +2,22 @@ import os
 import logging
 import json
 import datetime
-from turtle import title
 from flask import Blueprint, render_template, flash, request, send_file
 from flask.helpers import url_for
 from werkzeug.utils import redirect
 from dotenv import load_dotenv
+
 from .util import WebTexts, animal_list, team_list, img_story
+from .models import GuestBookDB, MemoryDB
+
+
+main = Blueprint('main', __name__)
 
 SITETITLE = "Seniorenresidenz für Showtiere"
 load_dotenv()
-main = Blueprint('main', __name__)
+guestbook_data = GuestBookDB(init_dummies=True)
+memory_data = MemoryDB(init_dummies=True)
 
-guestbook_data = {}
 
 @main.route('/', methods=["POST", "GET"])
 def home():
@@ -70,10 +74,19 @@ def team():
 @main.route("/gästebuch", methods=["POST", "GET"])
 def guestbook():
     title = SITETITLE + " | Gästebuch"
-    return render_template('guestbook.html', site_title= title, guestbook_dict = guestbook_data)
+    guestbook_db = guestbook_data.get_messages()
+    gb_dict = {}
+    gb_dict = guestbook_db['messages']
+    print(guestbook_db['messages'])
+
+    for key, value in guestbook_db['messages'].items():
+        print(key, value['message_name'])
+
+    return render_template('guestbook.html', site_title= title, guestbook_dict = gb_dict)
 
 @main.route("/guestbook/new-entry", methods=["POST", "GET"])
 def new_guestbook_entry():
+    
     firstname =request.form.get('firstname')
     if (firstname == ""):
         flash('Bitte gebe einen Vornamen ein!')
@@ -95,27 +108,30 @@ def new_guestbook_entry():
         flash('Bitte gebe eine Nachricht Addresse ein!')
         return redirect('/gästebuch')
    
-    new_message_time = datetime.datetime.now()
-    new_data ={"message_name": new_message_name, 
-    "message_email": str(new_message_email),
-    "message_time": str(new_message_time),
-    "message": str(new_message)
-    }
-    guestbook_data.update(new_data)
-    
-    save_guestbook_data(guestbook_data)
-    load_guestbook_data()
+    new_message_time = datetime.datetime.now().strftime("%d-%m-%Y | %H:%M:%S %p")
+
+    # save into db 
+    guestbook_data.new_message(
+        new_message_name=new_message_name,
+        new_message_email=new_message_email,
+        new_message_time= new_message_time,
+        new_message=new_message
+    )
     return redirect('/gästebuch')
+#######################################################
 
+######### MEMORY ############
 
+@main.route("/memory", methods=["POST", "GET"])
+def memory():
+    title = SITETITLE + " | Memory"
+    memory_db = memory_data.get_memory()
+    mem_dict = {}
+    mem_dict = memory_db['memory']
+    print(memory_db['memory'])
 
-def save_guestbook_data(data):
-    with open("leos\data\guestbook.log", "w") as f:
-        json_string = json.dumps(data)
-        f.write(json_string)
+    for key, value in memory_db['memory'].items():
+        print(key, value['memory_title'])
 
-def load_guestbook_data():
-    with open("leos\data\guestbook.log", "r") as fp:
-        guestbook_data = json.load(fp.read())
-        print(guestbook_data)
-    
+    return render_template('memory.html', site_title= title, memory_dict = mem_dict)
+

@@ -18,27 +18,30 @@
         <h1 id="hero-header">Gästebuch</h1>
         <h4 class="mb-3">Hier können Besucher der Webseite eine Nachricht hinterlassen.</h4>
         <br>
+        <br>
 
-        
-        {% for message in guestbook_dict %}
-        <div class="col">
-            <div class="card">
-                <div class="card-block">
-                    <div class="card-header border-0">
-                        <h4 class="card-title">{{ message['messages']['message_name'] }}</h4>
-                    </div>
-                    
-                    
-                    <p class="card-text">
-                        {{ message['message']}}
-                    </p>
-                    <br />
-                </div>
-                <h6>{{ message['message_time'] }}</h6>
+
+
+       {% for message, value in guestbook_dict.items() %}
+       <div class="col">
+         <div class="card">
+           <div class="card-block">
+             <div class="card-header border-0">
+               <h4 class="card-title">{{  value['message_name'] }}</h4>
+              </div>
+              
+              
+              <p class="card-text">
+                {{ value['message']}}
+              </p>
+              <br />
             </div>
+            <h6>{{ value['message_time'] }}</h6>
+          </div>
         </div>
+        <br>
+        <br>
         {% endfor %}
-        
 
         {% include "widgets/guestbook-form.html" %}
 <!--

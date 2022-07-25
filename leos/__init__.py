@@ -22,6 +22,8 @@ def create_app():
     from leos.payment import payment as payment_blueprint
     app.register_blueprint(payment_blueprint)
 
+    from leos.controls import controls as control_blueprint
+    app.register_blueprint(control_blueprint) 
 
     #from leos.models import Payments
 

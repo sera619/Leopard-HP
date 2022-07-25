@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/navbar-style.css" />
+    <link rel="stylesheet" href="../static/css/social-button.css" />
+    <link rel="stylesheet" href="../static/css/base_style.css" />
+    <title>{{site_title}}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Orbitron:wght@600&family=Oswald:wght@700&family=Press+Start+2P&display=swap');
+
+        body{
+            background: #959595; /* Old browsers */
+            background: -moz-linear-gradient(-45deg,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        }
+        .card{
+            background-color: rgba(32, 175, 218, 1);
+            box-shadow: 0 0 20px rgba(32, 175, 218, 0.75), 0 0 40px rgba(32, 175, 218, 0.75);
+        }
+        .card-text{
+            color: #111;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+    </style>
+  </head>
+  <body>
+    {% include "widgets/navbar.html" %}
+    <br />
+    <br />
+    <div class="container">
+      <center>
+        <h1 id="hero-header">Remember / Regenbogenland</h1>
+        <br />
+        <h4 id="hero-header" style="font-size: 1.9rem">
+          Unvergessen seid Ihr alle!<br />
+        </h4>
+        <h2 id="hero-header" style="font-size: 1.9rem;">In Gedenken an...</h2>
+      </center>
+      <br />
+      <br />
+      <div class="col">
+          
+          {% for memory, value in memory_dict.items() %}
+        <div class="card animal-bio flex-wrap">
+          <div class="card-block">
+            <center>
+              <div class="card-header border-0">
+                <h4 class="card-title text"><i class="fas fa-cross"></i>{{value['memory_title']}}</h4>
+                <h6>{{ value['memory_date'] }}</h6>
+              </div>
+            </center>
+            <br />
+            <p class="card-text text-center">
+              <img
+                class="card-img card-img-fluid rounded"
+                src="{{value['memory_image']}}"
+                style="width: 40%; height: auto"
+                alt=""
+              />
+              <br>
+              <br>
+              {{value["memory_text"]}}
+            </p>
+            <br />
+            <br />
+          </div>
+          <br />
+        </div>
+      </div>
+      <div class="spacer-8"></div>
+      {% endfor %}
+    
+    </div>
+    
+    {% include "widgets/brand.html" %}
+    {% include "widgets/footer.html" %} 
+    {%include "widgets/script.html" %}
+    {% include "widgets/cookie-constent.html"%}
+  </body>
+</html>
