@@ -19,6 +19,17 @@
         <h4 class="mb-3">Hier können Besucher der Webseite eine Nachricht hinterlassen.</h4>
         <br>
         <br>
+        
+        {% for message in get_flashed_messages() %}
+        <div class="card mb-3" style="width:80%;">
+            <h2 style="color:yellow;" class="card-header">Eintrag wird überprüft</h2>
+            <div class="card-body">
+                <p class="card-text">
+                    {{message}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
 
 
 

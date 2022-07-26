@@ -77,10 +77,12 @@ def guestbook():
     guestbook_db = guestbook_data.get_messages()
     gb_dict = {}
     gb_dict = guestbook_db['messages']
+    """
     print(guestbook_db['messages'])
 
     for key, value in guestbook_db['messages'].items():
         print(key, value['message_name'])
+    """
 
     return render_template('guestbook.html', site_title= title, guestbook_dict = gb_dict)
 
@@ -109,6 +111,7 @@ def new_guestbook_entry():
         return redirect('/gästebuch')
    
     new_message_time = datetime.datetime.now().strftime("%d-%m-%Y | %H:%M:%S %p")
+    flash("Dein Gästebucheintrag muss erst von einen Administrator überprüft werden danach wird er hier zu lesen sein.")
 
     # save into db 
     guestbook_data.new_message(
@@ -128,10 +131,22 @@ def memory():
     memory_db = memory_data.get_memory()
     mem_dict = {}
     mem_dict = memory_db['memory']
+    """
     print(memory_db['memory'])
 
     for key, value in memory_db['memory'].items():
         print(key, value['memory_title'])
+    """
 
     return render_template('memory.html', site_title= title, memory_dict = mem_dict)
 
+@main.route("/contact", methods=["POST", "GET"])
+def contact():
+    title = SITETITLE + " | Kontakt"
+    return render_template('contact.html', site_title=title)
+
+
+@main.route("/beratung", methods=["POST", "GET"])
+def beratung():
+    title = SITETITLE + " | Ernährungsberatung"
+    return render_template('beratung.html', site_title = title)

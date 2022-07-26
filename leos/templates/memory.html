@@ -15,7 +15,7 @@
             background: -webkit-linear-gradient(-45deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(135deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+            background-attachment: fixed;
         }
         .card{
             background-color: rgba(32, 175, 218, 1);
@@ -45,11 +45,11 @@
       </center>
       <br />
       <br />
+      {% for memory, value in memory_dict.items() %}
       <div class="col">
           
-          {% for memory, value in memory_dict.items() %}
-        <div class="card animal-bio flex-wrap">
           <div class="card-block">
+            <div class="card animal-bio flex-wrap" style="margin: auto 20%;">
             <center>
               <div class="card-header border-0">
                 <h4 class="card-title text"><i class="fas fa-cross"></i>{{value['memory_title']}}</h4>
@@ -61,7 +61,7 @@
               <img
                 class="card-img card-img-fluid rounded"
                 src="{{value['memory_image']}}"
-                style="width: 40%; height: auto"
+                style="max-width: 60%; max-height:70%"
                 alt=""
               />
               <br>
@@ -81,7 +81,7 @@
     
     {% include "widgets/brand.html" %}
     {% include "widgets/footer.html" %} 
-    {%include "widgets/script.html" %}
+    {% include "widgets/script.html" %}
     {% include "widgets/cookie-constent.html"%}
   </body>
 </html>

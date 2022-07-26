@@ -71,3 +71,18 @@ footer {
     padding: 0 10px;
     border: transparent solid;
 }
+
+#red-blink-text{
+    color: red;
+    animation: infinite 1s blinking-red;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+@keyframes blinking-red {
+    100%,0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
