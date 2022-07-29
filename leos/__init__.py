@@ -6,16 +6,18 @@ from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 
 
-#DB = SQLAlchemy()
+
+load_dotenv()
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get('FS')
-    #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://db.sqlite'
-    #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     #logging.basicConfig(filename='website.log', format='%(asctime)s %(message)s', datefmt='%d|%m|%Y - %I:%M:%S %p', level=logging.DEBUG)
 
-    #DB.init_app(app)
+    db.init_app(app)
     from leos.main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
@@ -29,5 +31,4 @@ def create_app():
 
     return app
 
-load_dotenv()
 app = create_app()
