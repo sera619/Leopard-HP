@@ -75,7 +75,11 @@
                             <td>{{ value['message_email'] }}</td>
                             <td>{{ value['message_time'] }}</td>
                             <td>{{ value['message'] }}</td>
-                            <td>{{ value['message_status']}}</td>
+                            {% if value['message_status'] == "True" %}
+                            <td style="color: green;">{{ value['message_status']}}</td>
+                            {% else %}
+                            <td style ="color: red;">{{ value['message_status'] }}</td>
+                            {% endif %}
                         </tr>
                         {% endfor %}
                     </table>
@@ -85,17 +89,16 @@
             </div>
             <div class="col">
                 
-                <br>
                 <label for="gb-list">Einträge</label>
+                <br>
                 <select multiple name="gb-list" id="gb-list">
                     
                     {% for message, value in messages_dict.items() %}
-                    <option value="{{ value['message_name'] }}">{{ value['message_name'] }}</option>
+                    <option name="gb_entry" value="{{ value['message_name'] }}">{{ value['message_name'] }}</option>
                     {% endfor %}
                 </select>
                 <br>
-                <input type="button" value="Löschen">
-                <input type="button" value="Akzeptieren">
+                <input type="submit" value="Ändern">
             </div>
         </div>
     </form>
