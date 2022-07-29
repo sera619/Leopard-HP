@@ -1,3 +1,4 @@
+from email.message import Message
 import json
 from tinydb import TinyDB, Query
 import datetime
@@ -12,16 +13,28 @@ class GuestBookDB:
     def __add_dummies__(self):
         Message = Query()
         if (not self.message_table.contains(Message.message_name == 'test-gb-entry')):
-            self.message_table.insert({'message_name': 'test-gb-entry', 'message_email':"testemail@test.com", "message_time":str( datetime.datetime.now().strftime("%d-%m-%Y | %H:%M:%S %p")), "message":"Dies ist eine Testmessage auf dem Gästebuch"})
+            self.message_table.insert({'message_name': 'test-gb-entry', 'message_email':"testemail@test.com", "message_time":str( datetime.datetime.now().strftime("%d-%m-%Y | %H:%M:%S %p")), "message":"Dies ist eine Testmessage auf dem Gästebuch", 'message_status': 'False'})
+            self.message_table.insert({'message_name': 'test-gb-entry2', 'message_email':"testemail@test.com", "message_time":str( datetime.datetime.now().strftime("%d-%m-%Y | %H:%M:%S %p")), "message":"Dies ist eine Testmessage auf dem Gästebuch", 'message_status': 'True'})
+
 
     def new_message(self, new_message_name, new_message_email, new_message_time, new_message):
         self.message_table.insert({
             "message_name": str(new_message_name),
             "message_email": str(new_message_email),
             "message_time": str(new_message_time),
-            "message": str(new_message)
+            "message": str(new_message),
+            "message_status": 'False'
         })
     
+    def change_message_status(self, message_name):
+        Message = Query()
+        edit_message = self.message_table.s(Message.message_name == str(message_name))
+        if edit_message['message_status'] == "True":
+            edit_message['message_status'] = "False"
+        else:
+            edit_message['message_status'] = "True"
+        self.message_table.update(edit_message, Message.message_name == str(message_name))
+
     def get_messages(self):
         db = {}
         with open('./leos/data/gb-data.json') as f:

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "widgets/header.html" %}
+    <link rel="stylesheet" href="../static/css/navbar-style.css" />
+    <link rel="stylesheet" href="../static/css/social-button.css" />
+    <link rel="stylesheet" href="../static/css/base_style.css" />
+    <title>{{site_title}}</title>
+    <style>
+
+        body{
+            background-color: #111;
+            color: #fff;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+        }
+        .col{
+            width: 75%;
+        }
+
+
+    </style>
+    <title>{{site_title}}</title>
+</head>
+<body>
+       <div class="container">
+        <center>
+
+            <div class="col">
+                
+                {% for message in get_flashed_messages() %}
+                <div class="card mb-3" style="width:80%;">
+                    <h2 style="color:yellow;" class="card-header">Information</h2>
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{message}}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+                <br>
+                <h1>Webseite-Kontroller Login</h1>
+                <br>
+                
+                {% include "controls/login_form.html" %}
+            </div>
+        </center>
+        </div> 
+
+</body>
+</html>

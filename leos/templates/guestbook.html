@@ -34,6 +34,7 @@
 
 
        {% for message, value in guestbook_dict.items() %}
+       {% if value['message_status'] == 'True' %}
        <div class="col">
          <div class="card">
            <div class="card-block">
@@ -52,6 +53,7 @@
         </div>
         <br>
         <br>
+        {% endif %}
         {% endfor %}
 
         {% include "widgets/guestbook-form.html" %}
