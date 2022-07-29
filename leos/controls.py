@@ -33,12 +33,20 @@ def control_site():
 
 
 
-@controls.route('/controls/change_message', methods=["POST", "GET"])
+@controls.route('/controls/accept', methods=["POST", "GET"])
 def change_message():
+    title = SITETITLE + " | Controls"
+    message = request.form.get("gb-list")
+    print(message)
+    guestbook_data.change_message_status(message)
+    gb_db = guestbook_data.get_messages()
+    gb_dict = {}
+    gb_dict = gb_db['messages']
+
+    return render_template('control.html', site_title = title , messages_dict = gb_dict)
+
+
     
-
-
-    pass
 
 
 @controls.route('/controls', methods=["POST", "GET"])
@@ -50,5 +58,4 @@ def control_auth():
 
 
     return render_template('control-login.html',
-    site_title = title,
-    messages_dict = gb_dict)
+    site_title = title)
